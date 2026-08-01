@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,8 +28,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
       - name: Build project
         run: echo "Build step would run here"
       - name: Create build output
@@ -51,8 +49,5 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
       - name: Deploy to staging
         run: echo "Deploying to staging"
